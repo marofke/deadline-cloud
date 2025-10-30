@@ -224,3 +224,6 @@ lstrip_blocks = true
 
 [tool.semantic_release.branches.release]
 match = "(mainline|release|patch_.*)"
+
+[tool.hatch.envs.default]
+python = "3.10"

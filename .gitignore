@@ -12,6 +12,11 @@ __pycache__/
 .attach_pid*
 .DS_Store
 
+# Coverage reports (generated files)
+api_snapshot.json
+*_coverage_report.tsv
+*_coverage_report.md
+
 # Build artifacts
 /build/
 /dist/

@@ -32,6 +32,7 @@ pre-install-commands = [
 
 [envs.integ.scripts]
 test = "pytest --xfail-tb --no-cov -vvv --numprocesses=1 {args:test/integ}"
+test-with-coverage = "pytest --xfail-tb --cov-config pyproject.toml --cov-report=xml:build/coverage/integ-coverage.xml -vvv --numprocesses=1 {args:test/integ}"
 
 [envs.installer.env-vars]
 SKIP_BOOTSTRAP_TEST_RESOURCES = "True"
@@ -88,3 +89,5 @@ deploy = "mkdocs gh-deploy {args}"
 generate-api-snapshot = "python scripts/generate_api_snapshot.py {args}"
 validate-api-snapshot = "python scripts/validate_api_snapshot.py {args}"
 check-api-breaks = "griffe check -s src deadline {args}"
+generate-api-coverage = "python scripts/generate_api_coverage_report.py {args}"
+generate-integ-api-coverage = "python scripts/generate_api_coverage_report.py --coverage-xml build/coverage/integ-coverage.xml --output integration_test_api_coverage_report.tsv {args}"
