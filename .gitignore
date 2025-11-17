@@ -35,3 +35,8 @@ src/deadline/client/ui/_translation_keys.py
 # Install builder license
 license.xml
 /THIRD_PARTY_LICENSES
+
+# API snapshot
+api_snapshot.json
+api_spreadsheet.*
+snapshot.json
